@@ -3,7 +3,7 @@
 ## Introduction to Microsoft Azure Fundamentals
 
 Microsoft Azure is a cloud computing platform with an ever-expanding set of services to help you build solutions to meet your business goals.
-![Microsoft Azure](images/AZ-900/1.png)
+![Microsoft Azure](../images/AZ-900/1.png)
 
 ## Introduction to Cloud Computing
 
@@ -17,6 +17,7 @@ Cloud services also expand the traditional IT offerings to include things like I
 ## Describe the Shared Responsibility Model
 
 With the shared responsibility model, responsibilities are shared between the cloud provider and the consumer.
+![Shared Responsibility Model](../images/AZ-900/2.png)
 
 **You (the consumer) are always responsible for:**
 - The information and data stored in the cloud  
@@ -40,6 +41,8 @@ A public cloud is built, controlled, and maintained by a third-party cloud provi
 
 ### Hybrid Cloud
 A hybrid cloud is a computing environment that uses both public and private clouds in an interconnected environment.
+
+![Cloud Models](../images/AZ-900/3.png)
 
 ### Multi-cloud
 In a multi-cloud environment, you deal with two (or more) public cloud providers and manage resources and security in both environments.
