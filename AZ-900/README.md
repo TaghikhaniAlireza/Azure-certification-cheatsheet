@@ -34,6 +34,7 @@ Once AZ-900 is complete, I will move on to SC-900 and SC-500 in my security lear
 
 📍 [LinkedIn](https://www.linkedin.com/in/alireza-taghikhani/)  
 📍 [Virgool (Farsi Blog)](https://virgool.io/@alireza-taghikhani)  
+📍 [GitHub Main Repo](https://github.com/TaghikhaniAlireza/Azure-certification-cheatsheet) 
 📍 [Medium (Coming Soon)](#)
 
 ---
