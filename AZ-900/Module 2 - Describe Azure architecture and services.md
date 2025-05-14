@@ -469,7 +469,7 @@ Azure virtual networks enable you to filter traffic between subnets by using the
 - GRS copies your data synchronously three times within a single physical location in the primary region using LRS.  
 - It then copies your data asynchronously to a single physical location in the secondary region (the region pair) using LRS.  
 - GRS offers durability for Azure Storage data objects of at least 16 nines (99.99999999999999%) over a given year.
-- ![Geo-Redundant Storage (GRS)](../images/AZ-900/geo-redundant-storage)
+- ![Geo-Redundant Storage (GRS)](../images/AZ-900/geo-redundant-storage.png)
 
 #### Geo-Zone-Redundant Storage (GZRS)
 - Data in a GZRS storage account is copied across three Azure availability zones in the primary region (similar to ZRS) and is also replicated to a secondary geographic region, using LRS, for protection from regional disasters.  
