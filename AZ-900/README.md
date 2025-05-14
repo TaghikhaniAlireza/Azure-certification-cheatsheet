@@ -23,10 +23,10 @@ This repository contains concise summaries, key concepts, and diagrams — with 
 
 ---
 
-## 📅 Update Plan
 
-I update this repository weekly as I progress through each module.  
-Once AZ-900 is complete, I will move on to SC-900 and SC-500 in my security learning path.
+## 📅 Planned Timeline
+
+Expected duration: 2-3 weeks (1 module per week)
 
 ---
 
