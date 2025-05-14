@@ -38,6 +38,7 @@ Expected duration: 3–4 weeks (1 module per week)
 📍 [LinkedIn](https://www.linkedin.com/in/alireza-taghikhani/)  
 📍 [Virgool (Farsi Blog)](https://virgool.io/@alireza-taghikhani)  
 📍 [GitHub Main Repo](https://github.com/TaghikhaniAlireza/Azure-certification-cheatsheet)
+📍 [Medium (Coming Soon)](#)
 
 ---
 
