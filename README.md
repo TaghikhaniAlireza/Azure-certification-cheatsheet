@@ -4,21 +4,27 @@ So, I’ve been diving into various **Azure certification** courses (all based o
 
 The goal here is to provide a structured study guide that will help anyone preparing for Azure exams. As I go through more courses, I’ll keep adding my notes here so that this becomes a more complete resource.
 
-## What’s included so far?
+## 📚 Study Modules & Progress
 
-### AZ-900: Microsoft Azure Fundamentals
-- **Module 1**: Describe Cloud Concepts
-- **Module 2**: Describe Azure Architecture and Services
-- **Module 3**: Describe Azure Management and Governance
+### 🟩 **AZ-900: Microsoft Azure Fundamentals**
+- [x] **Module 1**: Describe Cloud Concepts ✅ (Completed)
+- [x] **Module 2**: Describe Azure Architecture and Services ✅ (80% complete)
+- [ ] **Module 3**: Describe Azure Management and Governance (Not started yet)
 
-### SC-900: Microsoft Security, Compliance, and Identity Fundamentals
-- **Module 1**: Describe the Concepts of Security, Compliance, and Identity
-- **Module 2**: Describe the Capabilities of Microsoft Entra
-- **Module 3**: Describe the Capabilities of Microsoft Security Solutions
-- **Module 4**: Describe the Capabilities of Microsoft Priva and Microsoft Purview
+### 🔒 **SC-900: Microsoft Security, Compliance, and Identity Fundamentals**
+- [ ] **Module 1**: Describe the Concepts of Security, Compliance, and Identity (Not started yet)
+- [ ] **Module 2**: Describe the Capabilities of Microsoft Entra (Not started yet)
+- [ ] **Module 3**: Describe the Capabilities of Microsoft Security Solutions (Not started yet)
+- [ ] **Module 4**: Describe the Capabilities of Microsoft Priva and Microsoft Purview (Not started yet)
 
-As I continue studying more Azure topics, I’ll keep adding them here!
+---
 
+## 📅 Planned Timeline
+I plan to update the repository regularly:
+- **AZ-900**: Completed in 2 weeks.
+- **SC-900**: Estimated start after AZ-900 completion (3–4 weeks for full completion).
+
+  
 ## How to use these notes
 1. Clone this repo to your local machine.
 2. Open the markdown files with any markdown viewer.
