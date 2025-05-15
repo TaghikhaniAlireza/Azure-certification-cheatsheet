@@ -733,7 +733,7 @@ Blob storage is ideal for:
   - What device is used
 
 - Provides more granular MFA experiences (e.g., skip MFA if in known location)
-- ![onditional-access](../images/AZ-900/conditional-access-9bd268b8-757297cb.png)
+- ![conditional-access](../images/AZ-900/conditional-access-9bd268b8-757297cb.png)
 
 ### When can I use Conditional Access?
 
@@ -749,3 +749,99 @@ Blob storage is ideal for:
 
 - **Block access** from untrusted sources  
   - E.g., unknown or unexpected locations
+ 
+    
+## Describe Azure role-based access control
+
+- Azure enables you to control access through Azure role-based access control (Azure RBAC).
+- Role-based access control is applied to a scope, which is a resource or set of resources that this access applies to.
+- ![role-based-access-scope](../images/AZ-900/role-based-access-scope-4b12a8f3-7f40fc55.png)
+- Azure RBAC is hierarchical, in that when you grant access at a parent scope, those permissions are inherited by all child scopes.
+- Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager.
+- Azure RBAC doesn't enforce access permissions at the application or data level. Application security must be handled by your application.
+
+## Describe Zero Trust model
+
+- Zero Trust is a security model that assumes the worst case scenario and protects resources with that expectation. Zero Trust assumes breach at the outset, and then verifies each request as though it originated from an uncontrolled network.
+- Zero Trust security model, which is based on these guiding principles:
+  - Verify explicitly - Always authenticate and authorize based on all available data points.
+  - Use least privilege access - Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
+  - Assume breach - Minimize blast radius and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
+  - ![zero-trust](../images/AZ-900/zero-trust-cf9202be-d5c6882e.png)
+
+## Describe defense-in-depth
+
+- The objective of defense-in-depth is to protect information and prevent it from being stolen by those who aren't authorized to access it.
+- You can visualize defense-in-depth as a set of layers, with the data to be secured at the center and all the other layers functioning to protect that central data layer.
+- ![defense-depth](../images/AZ-900/defense-depth-486afc12-71a03f12.png)
+
+- **Physical security**
+  - Physically securing access to buildings and controlling access to computing hardware within the datacenter are the first line of defense.
+
+- **Identity and access**
+  - Control access to infrastructure and change control.
+  - Use single sign-on (SSO) and multifactor authentication.
+  - Audit events and changes.
+
+- **Perimeter**
+  - Use DDoS protection to filter large-scale attacks before they can affect the availability of a system for users.
+  - Use perimeter firewalls to identify and alert on malicious attacks against your network.
+
+- **Network**
+  - Limit communication between resources.
+  - Deny by default.
+  - Restrict inbound internet access and limit outbound access where appropriate.
+  - Implement secure connectivity to on-premises networks.
+
+- **Compute**
+  - Secure access to virtual machines.
+  - Implement endpoint protection on devices and keep systems patched and current.
+
+- **Application**
+  - Ensure that applications are secure and free of vulnerabilities.
+  - Store sensitive application secrets in a secure storage medium.
+  - Make security a design requirement for all application development.
+
+- **Data**
+  - Stored in a database.
+  - Stored on disk inside virtual machines.
+  - Stored in software as a service (SaaS) applications, such as Office 365.
+  - Managed through cloud storage.
+
+## Describe Microsoft Defender for Cloud
+
+- Defender for Cloud is a monitoring tool for security posture management and threat protection. It monitors your cloud, on-premises, hybrid, and multicloud environments to provide guidance and notifications aimed at strengthening your security posture.
+- Defender for Cloud provides the tools needed to harden your resources, track your security posture, protect against cyber-attacks, and streamline security management. Deployment of Defender for Cloud is easy, it’s already natively integrated to Azure.
+- Because Defender for Cloud is an Azure-native service, many Azure services are monitored and protected without needing any deployment.
+- When necessary, Defender for Cloud can automatically deploy a Log Analytics agent to gather security-related data.
+
+- **Azure-native protections**
+  - **Azure PaaS services** – Detect threats targeting Azure services including Azure App Service, Azure SQL, Azure Storage Account, and more data services. You can also perform anomaly detection on your Azure activity logs using the native integration with Microsoft Defender for Cloud Apps (formerly known as Microsoft Cloud App Security).
+  - **Azure data services** – Defender for Cloud includes capabilities that help you automatically classify your data in Azure SQL. You can also get assessments for potential vulnerabilities across Azure SQL and Storage services, and recommendations for how to mitigate them.
+  - **Networks** – Defender for Cloud helps you limit exposure to brute force attacks. By reducing access to virtual machine ports, using the just-in-time VM access, you can harden your network by preventing unnecessary access.
+
+- **Defend your hybrid resources**
+  - In addition to defending your Azure environment, you can add Defender for Cloud capabilities to your hybrid cloud environment to protect your non-Azure servers.
+  - To extend protection to on-premises machines, deploy Azure Arc and enable Defender for Cloud's enhanced security features.
+
+- **Defend resources running on other clouds**
+  - Defender for Cloud's CSPM features extend to your AWS resources. This agentless plan assesses your AWS resources according to AWS-specific security recommendations, and includes the results in the secure score. The resources will also be assessed for compliance with built-in standards specific to AWS (AWS CIS, AWS PCI DSS, and AWS Foundational Security Best Practices).
+  - Microsoft Defender for Containers extends its container threat detection and advanced defenses to your Amazon EKS Linux clusters.
+  - Microsoft Defender for Servers brings threat detection and advanced defenses to your Windows and Linux EC2
+
+- **Defender for Cloud fills three vital needs as you manage the security of your resources and workloads in the cloud and on-premises:**
+  - ![assess-secure-defend](../images/AZ-900/assess-secure-defend-46228306-c726aca3.png)
+  - **Continuously assess** – Know your security posture. Identify and track vulnerabilities.
+    - Defender for Cloud includes vulnerability assessment solutions for your virtual machines, container registries, and SQL servers.
+
+  - **Secure** – Harden resources and services with Azure Security Benchmark.
+    - Because policies in Defender for Cloud are built on top of Azure Policy controls, you're getting the full range and flexibility of a world-class policy solution.
+    - In Defender for Cloud, you can set your policies to run on management groups, across subscriptions, and even for a whole tenant.
+    - ![defender-for-cloud](../images/AZ-900/defender-for-cloud-d47a71d8-d1cc9fa3.png)
+
+  - **Defend** – Detect and resolve threats to resources, workloads, and services.
+    - When Defender for Cloud detects a threat in any area of your environment, it generates a security alert. Security alerts:
+      - Describe details of the affected resources
+      - Suggest remediation steps
+      - Provide, in some cases, an option to trigger a logic app in response
+
