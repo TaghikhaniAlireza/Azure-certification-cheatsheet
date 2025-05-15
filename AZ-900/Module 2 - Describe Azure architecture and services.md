@@ -596,3 +596,156 @@ Blob storage is ideal for:
     - Configure cloud tiering so the most frequently accessed files are replicated locally, while infrequently accessed files are kept in the cloud until requested.
 
 # Describe Azure identity, access, and security 
+
+## Describe Azure directory services
+
+- **Microsoft Entra ID** is a directory service that enables you to sign in and access both Microsoft cloud applications and cloud applications that you develop.  
+- Microsoft Entra ID can also help you maintain your on-premises Active Directory deployment  
+- Microsoft 365, Microsoft Office 365, Azure, and Microsoft Dynamics CRM Online subscribers are already using Microsoft Entra ID to authenticate into their account.
+
+### What does Microsoft Entra ID do?
+
+- **Authentication**:  
+  Verifying identity to access applications and resources. Includes:
+  - Self-service password reset  
+  - Multifactor authentication  
+  - Custom list of banned passwords  
+  - Smart lockout services
+- **Single sign-on**:  
+  Enables you to remember only one username and password to access multiple applications.
+- **Application management**:  
+  Manage cloud and on-premises apps using features like:
+  - Application Proxy  
+  - SaaS apps  
+  - My Apps portal  
+  - Single sign-on
+- **Device management**:  
+  Microsoft Entra ID supports registration of devices, enabling management through tools like Microsoft Intune
+
+### Can I connect my on-premises AD with Microsoft Entra ID?
+
+- **Microsoft Entra Connect** synchronizes user identities between on-premises AD and Microsoft Entra ID  
+- Synchronizes changes between both identity systems  
+- Enables use of:
+  - Single sign-on  
+  - Multifactor authentication  
+  - Self-service password reset
+
+### Microsoft Entra Domain Services
+
+- Provides managed domain services:
+  - Domain join  
+  - Group policy  
+  - LDAP  
+  - Kerberos/NTLM authentication
+- When you create a managed domain:
+  - Define a unique namespace (domain name)  
+  - Two Windows Server domain controllers (replica set) are deployed in Azure
+
+### Is information synchronized?
+
+- One-way sync from Microsoft Entra ID to Microsoft Entra Domain Services  
+- In hybrid environments:
+  - Microsoft Entra Connect syncs identity info to Entra ID  
+  - Then synced to managed domain
+- Azure apps, services, and VMs can use:
+  - Domain join  
+  - Group policy  
+  - LDAP  
+  - Kerberos/NTLM authentication
+![information synchronized](../images/AZ-900/azure-active-directory-sync-topology-7359f2b8-427db2d4.png)
+
+## Describe Azure authentication methods
+
+- **Authentication**: Process of establishing identity (person, service, or device)
+
+- ![passwordless-convenience-security](../images/AZ-900/passwordless-convenience-security-30321b4d-18aa7d73.png)
+
+### Single sign-on (SSO)
+
+- Enables a user to sign in once and access multiple apps/resources  
+- Security depends on the initial authenticator
+
+### Multifactor authentication (MFA)
+
+- Prompts for an extra form (factor) during sign-in:
+  - Something the user knows (e.g., challenge question)  
+  - Something the user has (e.g., code sent to phone)  
+  - Something the user is (e.g., biometric)
+
+### Microsoft Entra multifactor authentication
+
+- Enables users to choose an additional form during sign-in:
+  - Phone call  
+  - Mobile app notification
+
+### Passwordless authentication
+
+- More convenient (removes passwords, uses something you have/are/know)  
+- Requires setup on a device
+
+#### Methods:
+
+- **Windows Hello for Business**:
+  - For workers with dedicated Windows PCs  
+  - Credentials tied to PC (biometric + PIN)  
+  - Uses PKI + SSO
+
+- **Microsoft Authenticator app**:
+  - Can be used as a passwordless method
+
+- **FIDO2 security keys**:
+  - Based on WebAuthn standard  
+  - Unphishable, standards-based  
+  - Available in various form factors
+
+## Describe Azure external identities
+
+- An external identity = person, device, or service outside your organization  
+- **Microsoft Entra External ID** = all ways to securely interact with external users  
+- External users can "bring their own identities" (corporate/government/social)  
+- Their identity provider manages identity; you manage access via Entra ID or Azure AD B2C
+- ![azure-active-directory-external-identities](../images/AZ-900/azure-active-directory-external-identities-5a892021-ca79a69c.png)
+
+### External Identity Capabilities:
+
+- **B2B collaboration**:
+  - External users use their own identity to access Microsoft/enterprise apps  
+  - Shown in directory as guest users
+
+- **B2B direct connect**:
+  - Two-way trust between Entra organizations  
+  - Supports Teams shared channels  
+  - Users not shown in directory, but visible in Teams shared channels
+
+- **Azure AD B2C**:
+  - Use for consumer-facing apps (non-Microsoft apps)  
+  - Identity and access management via Azure AD B2C
+
+- Guest users can be invited by admins or users  
+- Applies to social identities (e.g., Microsoft accounts)
+
+## Describe Azure conditional access
+
+- **Conditional Access**: Entra ID tool to allow/deny access based on identity signals:
+  - Who the user is  
+  - Where the user is  
+  - What device is used
+
+- Provides more granular MFA experiences (e.g., skip MFA if in known location)
+- ![onditional-access](../images/AZ-900/conditional-access-9bd268b8-757297cb.png)
+
+### When can I use Conditional Access?
+
+- Require MFA based on role, location, or network  
+  - E.g., MFA for admins but not for users  
+  - MFA for access from outside corporate network
+
+- Require access through approved client apps  
+  - E.g., restrict which email apps can connect
+
+- Require access only from managed devices  
+  - Devices meeting security/compliance standards
+
+- **Block access** from untrusted sources  
+  - E.g., unknown or unexpected locations
