@@ -9,7 +9,7 @@ The goal here is to provide a structured study guide that will help anyone prepa
 ### 🟩 **AZ-900: Microsoft Azure Fundamentals**
 - [x] **Module 1**: Describe Cloud Concepts ✅ (Completed)
 - [x] **Module 2**: Describe Azure Architecture and Services ✅ (Completed)
-- [x] **Module 3**: Describe Azure Management and Governance ✅ (Work in Progress)
+- [ ] **Module 3**: Describe Azure Management and Governance ✅ (Work in Progress)
 
 ### 🔒 **SC-900: Microsoft Security, Compliance, and Identity Fundamentals**
 - [ ] **Module 1**: Describe the Concepts of Security, Compliance, and Identity (Not started yet)
