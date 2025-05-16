@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7252deb2-d022-4dcb-a04c-497547c9b44f)## Describe Cost Management in Azure
+## Describe Cost Management in Azure
 
 ### Describe factors that can affect costs in Azure
 
