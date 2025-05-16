@@ -15,11 +15,11 @@ This repository contains concise summaries, key concepts, and diagrams — with 
 
 - [x] **Module 2:** Describe Azure Architecture and Services  
   → Completed and published ✅  
-  → [Work in Progress](./Module%202%20-%20Describe%20Azure%20architecture%20and%20services.md)
+  → [View Notes](./Module%202%20-%20Describe%20Azure%20architecture%20and%20services.md)
 
-- [ ] **Module 3:** Describe Azure Management and Governance  
-  → Not started yet ❌  
-  → [Coming Soon](./Module%203%20-%20Describe%20Azure%20management%20and%20governance.md)
+- [x] **Module 3:** Describe Azure Management and Governance  
+  → ~25% Completed  ✅ 
+  → [Work in Progress](./Module%203%20-%20Describe%20Azure%20management%20and%20governance.md)
 
 ---
 
