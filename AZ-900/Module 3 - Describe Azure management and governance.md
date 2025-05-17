@@ -97,7 +97,90 @@
 - ![tag](../images/AZ-900/tag.png)
 
 ## Describe features and tools in Azure for governance and compliance
-→ Not started yet ❌
+
+### Describe the purpose of Microsoft Purview
+
+- **Microsoft Purview** is a family of data governance, risk, and compliance solutions that helps you get a single, unified view into your data. Microsoft Purview brings insights about your on-premises, multicloud, and software-as-a-service data together.
+
+- Two main solution areas comprise Microsoft Purview:
+
+  - **Risk and compliance**
+    - Microsoft 365 features as a core component of the Microsoft Purview risk and compliance solutions.
+    - Microsoft Purview, by managing and monitoring your data, helps your organization:
+      - Protect sensitive data across clouds, apps, and devices.
+      - Identify data risks and manage regulatory compliance requirements.
+      - Get started with regulatory compliance.
+
+  - **Unified data governance**
+    - Microsoft Purview’s robust data governance capabilities enable you to manage your data stored in Azure, SQL and Hive databases, locally, and in other clouds like Amazon S3.
+    - Microsoft Purview’s unified data governance helps your organization:
+      - Create an up-to-date map of your entire data estate that includes data classification and end-to-end lineage.
+      - Identify where sensitive data is stored in your estate.
+      - Create a secure environment for data consumers to find valuable data.
+      - Generate insights about how your data is stored and used.
+      - Manage access to the data in your estate securely and at scale.
+
+---
+
+### Describe the purpose of Azure Policy
+
+- **Azure Policy** is a service in Azure that enables you to create, assign, and manage policies that control or audit your resources.
+- Azure Policy comes with built-in policy and initiative definitions for Storage, Networking, Compute, Security Center, and Monitoring.
+- In some cases, Azure Policy can automatically remediate noncompliant resources and configurations to ensure the integrity of the state of the resources.
+- Azure Policy also integrates with Azure DevOps by applying any continuous integration and delivery pipeline policies that pertain to the pre-deployment and post-deployment phases of your applications.
+
+#### Azure Policy Initiatives
+
+- An **Azure Policy initiative** is a way of grouping related policies together. 
+- Under this initiative, the following policy definitions are included:
+  - **Monitor unencrypted SQL Database in Security Center**: Monitors for unencrypted SQL databases and servers.
+  - **Monitor OS vulnerabilities in Security Center**: Monitors servers that don't satisfy the configured OS vulnerability baseline.
+  - **Monitor missing Endpoint Protection in Security Center**: Monitors for servers that don't have an installed endpoint protection agent.
+
+---
+
+### Describe the purpose of Resource Locks
+
+- A **resource lock** prevents resources from being accidentally deleted or changed.
+- Resource locks can be applied to individual resources, resource groups, or even an entire subscription.
+- Resource locks are inherited — a lock on a resource group applies to all resources within that group.
+
+#### Types of Resource Locks
+
+- **Delete**: Authorized users can read and modify a resource, but cannot delete it.
+- **ReadOnly**: Authorized users can read a resource, but cannot delete or update it.
+
+- Resource locks can be managed from:
+  - The Azure portal
+  - PowerShell
+  - Azure CLI
+  - Azure Resource Manager template
+  - ![resource-lock](../images/AZ-900/resource-lock-54695e43-61c37c58.png)
+
+#### Modifying a Locked Resource
+
+- To modify a locked resource, you must first **remove the lock**.
+- Once the lock is removed, you can perform any action you have permission for.
+- Resource locks **apply regardless of RBAC permissions**.
+
+---
+
+### Describe the purpose of the Service Trust Portal
+
+- The **Microsoft Service Trust Portal** is a portal that provides access to content, tools, and resources about Microsoft security, privacy, and compliance practices.
+- It includes details about Microsoft's implementation of controls and processes that protect cloud services and customer data.
+
+- 🔗 https://servicetrust.microsoft.com/
+- ![service-trust-portal](../images/AZ-900/service-trust-portal-f7b27e61-b5ad84d7.png)
+
+#### Main Menu Features
+
+- **Service Trust Portal**: Quick access link to the home page.
+- **My Library**: Lets you save/pin documents for quick access and notifications on updates.
+- **All Documents**: A central location for all documents, where you can also pin items for My Library.
+
+- Reports and documents are available to download for **at least 12 months** after publishing or until a newer version is available.
+
 
 ## Describe features and tools for managing and deploying Azure resources 
 → Not started yet ❌
