@@ -182,8 +182,97 @@
 - Reports and documents are available to download for **at least 12 months** after publishing or until a newer version is available.
 
 
-## Describe features and tools for managing and deploying Azure resources 
-→ Not started yet ❌
+## Describe Features and Tools for Managing and Deploying Azure Resources
+
+### Describe Tools for Interacting with Azure
+
+#### Azure Portal
+- The **Azure portal** is a web-based, unified console that provides an alternative to command-line tools.
+- With the Azure portal, you can manage your Azure subscription using a graphical user interface.
+
+#### Azure Cloud Shell
+- **Azure Cloud Shell** is a browser-based shell tool that allows you to create, configure, and manage Azure resources.
+- It supports both **Azure PowerShell** and the **Azure Command Line Interface (CLI)** (Bash shell).
+- Accessible via the Azure portal by selecting the Cloud Shell icon.
+- ![cloud-shell-icon](../images/AZ-900/cloud-shell-icon-dbf37a88.png)
+
+##### Features:
+- Browser-based experience — no local installation or configuration required.
+- Authenticated to your Azure credentials — knows your identity and permissions.
+- Supports both PowerShell and CLI (Bash), allowing you to choose your preferred environment.
+
+#### Azure PowerShell
+- A shell used by developers, DevOps, and IT professionals to run **cmdlets** that call the Azure REST API.
+- Cmdlets can be run independently or combined into scripts for orchestration.
+- Useful for automating management tasks in Azure.
+
+#### Azure Command Line Interface (CLI)
+- Functionally similar to Azure PowerShell but uses **Bash syntax**.
+- Preferred by users who are more familiar with Bash scripting conventions.
+
+---
+
+### Describe the Purpose of Azure Arc
+
+- Azure Arc uses Azure Resource Manager (ARM) to extend compliance and monitoring to hybrid and multi-cloud environments.
+
+#### Azure Arc Enables You To:
+- Project non-Azure resources into ARM to manage them centrally.
+- Manage multi-cloud and hybrid:
+  - Virtual machines
+  - Kubernetes clusters
+  - Databases
+- Use familiar Azure services and management capabilities regardless of where the resources are hosted.
+- Integrate traditional ITOps with DevOps practices.
+- Configure custom locations on top of Azure Arc-enabled Kubernetes clusters and extensions.
+
+#### Supported Resource Types (Outside Azure):
+- Servers
+- Kubernetes clusters
+- Azure data services
+- SQL Server
+- Virtual machines (Preview)
+
+---
+
+### Describe Azure Resource Manager (ARM) and ARM Templates
+
+- **Azure Resource Manager (ARM)** provides the management layer for all Azure resources.
+- It authenticates, authorizes, and processes resource management requests from tools, APIs, and SDKs.
+
+#### With ARM, You Can:
+- Manage infrastructure using **declarative templates** instead of scripts.
+- Deploy and manage resources as a group.
+- Re-deploy environments consistently throughout the development lifecycle.
+- Define resource dependencies for correct deployment order.
+- Apply RBAC and tags for access control and logical organization.
+- Track and analyze costs using tagged resources.
+
+---
+
+### Infrastructure as Code (IaC)
+
+#### ARM Templates
+- **JSON-based declarative templates** that define your infrastructure.
+- Support execution of PowerShell or Bash scripts before/after deployment.
+
+##### Key Benefits:
+- **Declarative syntax**: Define what to deploy, not how to deploy.
+- **Repeatable results**: Consistently deploy dev/test environments.
+- **Orchestration**: ARM handles resource dependencies and parallel deployments.
+- **Modular files**: Break templates into smaller components or nest them.
+- **Extensibility**: Include deployment scripts within templates or reference them externally.
+
+#### Bicep
+- A **declarative language** to define Azure infrastructure using simpler syntax than JSON.
+
+##### Bicep Advantages:
+- **Support for all API versions**: Immediate use of new and preview Azure resources.
+- **Simple syntax**: More readable and concise than JSON; no programming background required.
+- **Repeatable results**: Idempotent deployments ensure consistent infrastructure.
+- **Orchestration**: Automatically handles resource dependencies and parallelism.
+- **Modularity**: Use modules to reuse and organize code efficiently.
+
 
 ## Describe monitoring tools in Azure
 → Not started yet ❌
