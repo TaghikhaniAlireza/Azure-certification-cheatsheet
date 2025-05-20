@@ -8,9 +8,9 @@ This repository will host my personal notes and cheat sheets for the **SC-900 ce
 
 ## 📦 Modules Overview & Progress
 
-- [ ] **Module 1:** Describe the Concepts of Security, Compliance, and Identity  
-  → Not started yet ❌  
-  → [Coming Soon](./Module%201%20-%20Describe%20the%20Concepts%20of%20Security,%20Compliance,%20and%20Identity.md)
+- [x] **Module 1:** Describe the Concepts of Security, Compliance, and Identity  
+  → In Progress 
+  → [Not Completed](./Module%201%20-%20Describe%20the%20Concepts%20of%20Security,%20Compliance,%20and%20Identity.md) ✅
 
 - [ ] **Module 2:** Describe the Capabilities of Microsoft Entra  
   → Not started yet ❌  
@@ -28,8 +28,8 @@ This repository will host my personal notes and cheat sheets for the **SC-900 ce
 
 ## 📅 Planned Timeline
 
-Estimated start: After completing AZ-900  
-Expected duration: 3–4 weeks (1 module per week)
+- **SC-900**: Estimated to take **4 weeks** to complete. Study is planned to begin in **early June 2025** and finish by **early July 2025**.
+
 
 ---
 
