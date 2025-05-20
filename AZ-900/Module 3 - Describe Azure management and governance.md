@@ -274,5 +274,87 @@
 - **Modularity**: Use modules to reuse and organize code efficiently.
 
 
-## Describe monitoring tools in Azure
-→ Not started yet ❌
+## Describe Monitoring Tools in Azure
+
+### Describe the Purpose of Azure Advisor
+
+- **Azure Advisor** evaluates your Azure resources and provides recommendations to improve:
+  - **Reliability**
+  - **Security**
+  - **Performance**
+  - **Operational excellence**
+  - **Cost-efficiency**
+
+- Recommendations are accessible via the **Azure portal** and **API**, and notifications can be set up for new suggestions.
+
+#### Recommendation Categories:
+- **Reliability** – Ensures continuity for business-critical applications.
+- **Security** – Detects threats and vulnerabilities that could lead to security breaches.
+- **Performance** – Helps improve application speed.
+- **Operational Excellence** – Enhances process efficiency, resource management, and best practices.
+- **Cost** – Offers ways to optimize and reduce Azure spending.
+- ![azure-advisor-dashboard](../images/AZ-900/azure-advisor-dashboard-baca22e2.png)
+
+---
+
+### Describe Azure Service Health
+
+- **Azure Service Health** tracks the health of both your deployed resources and Azure’s global infrastructure.
+
+#### Composed of Three Services:
+
+1. **Azure Status**
+   - Provides a **global view** of Azure service health across all regions.
+   - Useful for identifying **widespread service outages**.
+
+2. **Service Health**
+   - Offers a **personalized view** focused on your Azure services and regions.
+   - Communicates outages, planned maintenance, and health advisories.
+   - Allows for **alerts** to be configured for service-impacting events.
+
+3. **Resource Health**
+   - Provides the **health status** of individual Azure resources.
+   - Works with **Azure Monitor** to trigger alerts for availability changes.
+
+---
+
+### Describe Azure Monitor
+
+- **Azure Monitor** is a platform for collecting, analyzing, visualizing, and acting on telemetry from Azure, on-premises, or multi-cloud environments.
+
+#### Core Capabilities:
+- Monitor performance and availability of applications and infrastructure.
+- Set **thresholds** to trigger autoscaling or alerts.
+- Receive real-time notifications via **SMS, email**, etc.
+
+#### Key Tools and Features:
+
+##### Azure Log Analytics
+- Tool within the Azure portal to **write and run queries** on monitoring data.
+- Enables **deep analysis** of telemetry collected by Azure Monitor.
+
+##### Azure Monitor Alerts
+- Automated alerts that trigger when **defined conditions** are met.
+- Use **action groups** to:
+  - Define who gets notified (via email, SMS, webhook, etc.)
+  - Specify actions (run a script, create a ticket, etc.)
+- Used by **Azure Monitor**, **Service Health**, and **Azure Advisor**.
+- ![azure-monitor-alerts](../images/AZ-900/azure-monitor-alerts-2478e941.png)
+
+##### Application Insights
+- A feature within Azure Monitor to monitor **web applications**.
+- Works across **Azure**, **on-premises**, and **other clouds**.
+
+###### Configuration Options:
+- Install an **SDK** in your application.
+- Use the **Application Insights agent** (supported in C#.NET, VB.NET, Java, JavaScript, Node.js, Python).
+
+###### Tracks:
+- Request rates, response times, failure rates
+- Dependency call rates, performance, and failures
+- Page views and load performance
+- AJAX call performance
+- User and session analytics
+- Server performance metrics (CPU, memory, network)
+
+- Not only does Application Insights help you monitor the performance of your application, but you can also configure it to periodically send synthetic requests to your application, allowing you to check the status and monitor your application even during periods of low activity.
