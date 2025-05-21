@@ -1,2 +1,9 @@
-- راهنما
-  - [مقایسه Azure، AWS، GCP و OpenStack؛ کدام سرویس ابری برای ما مناسب‌تر است؟](/guide/Cloud_Providers_Comparation.md)
+- مفاهیم کلود
+  - [مقایسه Azure، AWS، GCP و OpenStack؛ کدام سرویس ابری برای ما مناسب‌تر است؟](comparison.md)
+  - [رایانش ابری به زبان ساده؛ راهنمای شروع برای AZ-900](az900-intro.md)
+
+- AZ-900
+  - [ ]()
+
+- SC-900
+  - [ ]()
