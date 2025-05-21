@@ -1,0 +1,2 @@
+- راهنما
+  - [مقایسه Azure، AWS، GCP و OpenStack؛ کدام سرویس ابری برای ما مناسب‌تر است؟](/guide/Cloud_Providers_Comparation.md)
