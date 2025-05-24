@@ -5,6 +5,12 @@
 
 - SC-900
   - [ ]()
- 
-- Administration
-  - 
+- Azure VMware Solution
+  - [مقدمه و معرفی](guide/avs/intro.md)
+  - [معماری و اجزا](guide/avs/architecture.md)
+  - [راه‌اندازی اولیه](guide/avs/deployment.md)
+  - [مهاجرت به AVS](guide/avs/migration.md)
+  - [امنیت و دسترسی](guide/avs/security.md)
+  - [ذخیره‌سازی و پایداری](guide/avs/storage.md)
+  - [سناریوهای استفاده](guide/avs/scenarios.md)
+  - [جمع‌بندی و منابع](guide/avs/summary.md)
