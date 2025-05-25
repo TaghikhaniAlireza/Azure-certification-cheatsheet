@@ -9,7 +9,7 @@ This repository will host my personal notes and cheat sheets for the **SC-900 ce
 ## 📦 Modules Overview & Progress
 
 - [x] **Module 1:** Describe the Concepts of Security, Compliance, and Identity  
-  → In Progress ✅
+  → Completed ✅
   → [View Notes](./Module%201%20-%20Describe%20the%20Concepts%20of%20Security,%20Compliance,%20and%20Identity.md) 
 
 - [ ] **Module 2:** Describe the Capabilities of Microsoft Entra  
