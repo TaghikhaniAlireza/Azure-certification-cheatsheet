@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://taghikhanialireza.github.io/Azure-certification-cheatsheet/sitemap.xml
