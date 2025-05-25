@@ -94,7 +94,7 @@ Authentication is the process of proving that a person is who they say they are.
 Determines the level of access or the permissions an authenticated person has to your data and resources. Authorization is sometimes shortened to AuthZ.
 
 ## Identity as the primary security perimeter
-![identity-new-security-perimeter](../image/SC-900/3-identity-new-security-perimeter.png)
+![identity-new-security-perimeter](../images/SC-900/3-identity-new-security-perimeter.png)
 
 ## Four pillars of an identity infrastructure
 - **Administration**: Administration is about the creation and management/governance of identities for users, devices, and services.
@@ -123,24 +123,24 @@ Determines the level of access or the permissions an authenticated person has to
 ## Federation
 - Enables the access of services across organizational or domain boundaries by establishing trust relationships between the respective domain’s identity provider.
 - With federation, trust isn't always bidirectional.
-- ![federated-identification](../image/SC-900/5-federated-identification.png)
+- ![federated-identification](../images/SC-900/5-federated-identification.png)
 
 ## Hybrid identity
 Microsoft supports the following three methods for hybrid identities to authenticate:
 
 ### Azure AD password hash synchronization
 - The most straightforward approach for synchronizing these two versions of the active directory is Azure AD password hash synchronization. With this method, the user can use the same username and password from the on-premises Active Directory and the cloud-based applications.
-- ![password-hash](../image/SC-900/password-hash.png)
+- ![password-hash](../images/SC-900/password-hash.png)
 
 ### Azure AD pass-through authentication
 - An alternative approach is Azure AD pass-through authentication. Similar to password hash synchronization, this approach enables you to authenticate through either on-premises or cloud-based applications. However, a significant difference is that the password is compared in real-time. Therefore, password validation always occurs on-premises rather than in the cloud.
-- ![pass-through](../image/SC-900/pass-through.png)
+- ![pass-through](../images/SC-900/pass-through.png)
 
 ### Federated access
 - In a federated authentication setup, Azure AD delegates the authentication process to a separate trusted authentication system, such as on-premises Active Directory Federation Services (AD FS). This external system is responsible for validating the user's password and ensuring that all user authentication takes place on-premises, which can be advantageous for certain security and compliance requirements.
 - One notable benefit of using federated authentication with AD FS is the ability to set up password hash synchronization as a contingency plan. Password hash synchronization can act as a backup authentication mechanism if the AD FS infrastructure encounters issues or becomes unavailable.
 - Federated authentication is recommended for organizations seeking advanced authentication features not currently available in Azure AD. This method is particularly suitable for scenarios that involve sign-on using smart cards or certificates, on-premises multi-factor authentication (MFA) server, and third-party authentication solutions.
-- ![federation](../image/SC-900/federation.png)
+- ![federation](../images/SC-900/federation.png)
 
 ## Identity providers
 
