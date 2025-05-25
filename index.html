@@ -37,14 +37,22 @@
   <div id="app">در حال بارگذاری...</div>
   <script>
     window.$docsify = {
-      name: 'آموزش Azure',
+      name: 'آموزش Azure Security',
       repo: 'TaghikhaniAlireza/Azure-certification-cheatsheet',
       loadSidebar: 'guide/_sidebar.md',
       subMaxLevel: 2,
       homepage: 'guide/README.md'
+      plugins: [
+        function(hook, vm) {
+           window.DocsifySitemap.createSitemap({
+              hostname: 'https://taghikhanialireza.github.io/Azure-certification-cheatsheet'
+         });
+       }
+    ]
     };
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sitemap/dist/docsify-sitemap.min.js"></script>
 </body>
 </html>
