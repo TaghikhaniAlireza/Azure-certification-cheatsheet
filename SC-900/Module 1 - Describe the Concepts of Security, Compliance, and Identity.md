@@ -83,3 +83,75 @@
 - **Data sovereignty**: Data subject to local jurisdiction laws.
 - **Data privacy**: Transparency in collecting, processing, and sharing data.
 - ![grc-framework-v3-inline](../images/SC-900/grc-framework-v3-inline.png)
+
+# Identity Concept
+An identity is the set of things that define or characterize someone or something
+
+## Authentication
+Authentication is the process of proving that a person is who they say they are.  Authentication is sometimes shortened to AuthN.
+
+## Authorization
+Determines the level of access or the permissions an authenticated person has to your data and resources. Authorization is sometimes shortened to AuthZ.
+
+## Identity as the primary security perimeter
+![identity-new-security-perimeter](../image/SC-900/3-identity-new-security-perimeter.png)
+
+## Four pillars of an identity infrastructure
+- **Administration**: Administration is about the creation and management/governance of identities for users, devices, and services.
+- **Authentication**: The authentication pillar tells the story of how much an IT system needs to know about an identity to have sufficient proof that they really are who they say they are.
+- **Authorization**: The authorization pillar is about processing the incoming identity data to determine the level of access an authenticated person or service has within the application or service that it wants to access.
+- **Auditing**: The auditing pillar is about tracking who does what, when, where, and how.
+
+## Identity provider
+- Modern authentication is an umbrella term for authentication and authorization methods between a client, such as your laptop or phone, and a server, like a website or application.
+- An identity provider creates, maintains, and manages identity information while offering authentication, authorization, and auditing services.
+- With a central identity provider, organizations can establish authentication and authorization policies, monitor user behavior, identify suspicious activities, and reduce malicious attacks.
+- When the identity (which can be a user or an application) has been verified, the identity provider issues a security token that the client sends to the server.
+- The server validates the security token through its trust relationship with the identity provider.
+- Microsoft Entra ID is an example of a cloud-based identity provider.
+
+## Single sign-on
+- The user logs in once and that credential is used to access multiple applications or resources.
+- When you set up SSO between multiple identity providers, it's called federation.
+
+## Active Directory (AD)
+- The best-known service of this kind is Active Directory Domain Services (AD DS). It stores information about members of the domain, including devices and users, verifies their credentials, and defines their access rights.
+- A server running AD DS is a domain controller (DC).
+- AD DS doesn't, however, natively support mobile devices, SaaS applications, or line of business apps that require modern authentication methods.
+- Microsoft Entra ID and part of the Microsoft Entra family of multicloud identity and access solutions is an example of that evolution and provides organizations with an Identity as a Service (IDaaS) solution for all their apps across cloud and on-premises.
+
+## Federation
+- Enables the access of services across organizational or domain boundaries by establishing trust relationships between the respective domain’s identity provider.
+- With federation, trust isn't always bidirectional.
+- ![federated-identification](../image/SC-900/5-federated-identification.png)
+
+## Hybrid identity
+Microsoft supports the following three methods for hybrid identities to authenticate:
+
+### Azure AD password hash synchronization
+- The most straightforward approach for synchronizing these two versions of the active directory is Azure AD password hash synchronization. With this method, the user can use the same username and password from the on-premises Active Directory and the cloud-based applications.
+- ![password-hash](../image/SC-900/password-hash.png)
+
+### Azure AD pass-through authentication
+- An alternative approach is Azure AD pass-through authentication. Similar to password hash synchronization, this approach enables you to authenticate through either on-premises or cloud-based applications. However, a significant difference is that the password is compared in real-time. Therefore, password validation always occurs on-premises rather than in the cloud.
+- ![pass-through](../image/SC-900/pass-through.png)
+
+### Federated access
+- In a federated authentication setup, Azure AD delegates the authentication process to a separate trusted authentication system, such as on-premises Active Directory Federation Services (AD FS). This external system is responsible for validating the user's password and ensuring that all user authentication takes place on-premises, which can be advantageous for certain security and compliance requirements.
+- One notable benefit of using federated authentication with AD FS is the ability to set up password hash synchronization as a contingency plan. Password hash synchronization can act as a backup authentication mechanism if the AD FS infrastructure encounters issues or becomes unavailable.
+- Federated authentication is recommended for organizations seeking advanced authentication features not currently available in Azure AD. This method is particularly suitable for scenarios that involve sign-on using smart cards or certificates, on-premises multi-factor authentication (MFA) server, and third-party authentication solutions.
+- ![federation](../image/SC-900/federation.png)
+
+## Identity providers
+
+### Azure AD B2B (Business-to-Business)
+- Azure enables secure collaboration between businesses by granting them 'guest' status. This method of access allows you to customize and control the guest's access to your system. For instance, you can restrict movement and limit access to specific applications or data.
+
+### Azure AD B2C (Business-to-Customer)
+- Azure Active Directory B2C provides business-to-customer identity as a service. It involves creating, validating, and maintaining customer identities for authentication. Azure AD’s B2C option is ideal for businesses that want to onboard clients for an application because it offers white-label authentication. White-label authentication means that businesses can easily create their own authentication process with templates that can be customized with their own branding and interface.
+
+- Which of the following is a protocol used to configure business-to-customer (B2C)?
+  - SAML
+
+Azure AD can be configured to determine the security posture for Azure AD Domain Services (AAD DS) through the use of GPO
+
