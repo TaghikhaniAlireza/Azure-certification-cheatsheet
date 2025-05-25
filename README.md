@@ -12,7 +12,7 @@ The goal here is to provide a structured study guide that will help anyone prepa
 - [x] **Module 3**: Describe Azure Management and Governance ✅ (Completed)
 
 ### 🔒 **SC-900: Microsoft Security, Compliance, and Identity Fundamentals**
-- [x] **Module 1**: Describe the Concepts of Security, Compliance, and Identity (In Progress)
+- [x] **Module 1**: Describe the Concepts of Security, Compliance, and Identity ✅ (Completed)
 - [ ] **Module 2**: Describe the Capabilities of Microsoft Entra (Not started yet)
 - [ ] **Module 3**: Describe the Capabilities of Microsoft Security Solutions (Not started yet)
 - [ ] **Module 4**: Describe the Capabilities of Microsoft Priva and Microsoft Purview (Not started yet)
