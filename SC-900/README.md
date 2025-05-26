@@ -13,7 +13,7 @@ This repository will host my personal notes and cheat sheets for the **SC-900 ce
   → [View Notes](./Module%201%20-%20Describe%20the%20Concepts%20of%20Security,%20Compliance,%20and%20Identity.md) 
 
 - [ ] **Module 2:** Describe the Capabilities of Microsoft Entra  
-  → Not started yet ❌  
+  → In Progress  ✅
   → [View Notes](./Module%202%20-%20Describe%20the%20Capabilities%20of%20Microsoft%20Entra.md)
 
 - [ ] **Module 3:** Describe the Capabilities of Microsoft Security Solutions  
