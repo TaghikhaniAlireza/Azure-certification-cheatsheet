@@ -92,4 +92,64 @@ There are two types of managed identities:
 - This is useful in a scenario where you may have multiple VMs that all have the same set of permissions but may get recycled frequently.
 - Deleting any of the VMs doesn’t impact the user-assigned managed identity.
 
+## Device
+
+Device identities can be set up in different ways in Microsoft Entra ID:
+
+- **Microsoft Entra registered devices**  
+  The goal of Microsoft Entra registered devices is to provide users with support for bring your own device (BYOD) or mobile device scenarios.
+
+- **Microsoft Entra joined**  
+  A Microsoft Entra joined device is a device joined to Microsoft Entra ID through an organizational account, which is then used to sign in to the device.
+
+- **Microsoft Entra hybrid joined devices**  
+  These devices are joined to your on-premises Active Directory and Microsoft Entra ID, requiring an organizational account to sign in to the device.
+
+### Notes
+
+- IT admins can use tools like **Microsoft Intune**, a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM), to control how an organization’s devices are used.
+- ![what-is-intune](../images/SC-900/what-is-intune.png)
+- [Learn more about Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/what-is-intune)
+
+---
+
+## Groups
+
+- In Microsoft Entra ID, if you have several identities with the same access needs, you can create a **group**.
+
+### Group Types
+
+- **Security**  
+  A security group is the most common type of group and it's used to manage user and device access to shared resources.  
+  _Creating security groups requires a Microsoft Entra administrator role._
+
+- **Microsoft 365**  
+  Also known as a distribution group, used for grouping users according to collaboration needs.  
+  - Members of a Microsoft 365 group can only include users, including users outside of your organization.  
+  - Because these groups are intended for collaboration, the default is to allow users to create them — no admin role needed.
+
+- **Dynamic Membership**  
+  Uses rules to automatically add and remove identities.
+
+---
+
+## Hybrid Identity
+
+Hybrid identity is accomplished through provisioning and synchronization.
+
+### Key Concepts
+
+- **Inter-directory provisioning**  
+  Provisioning an identity between two different directory services systems.  
+  _The most common scenario: a user already in Active Directory is provisioned into Microsoft Entra ID._
+
+- **Synchronization**  
+  Responsible for ensuring identity information for your on-premises users and groups matches the cloud.
+
+### Microsoft Entra Cloud Sync
+
+- Designed to meet and accomplish your hybrid identity goals for the provisioning and synchronization of users, groups, and contacts to Microsoft Entra ID.
+- Uses the **Microsoft Entra cloud provisioning agent**, a lightweight service that bridges Entra ID and Active Directory.
+- Employs the **System for Cross-domain Identity Management (SCIM)** specification to provision and deprovision users and groups.
+- SCIM is a standard for automating the exchange of user/group identity information between domains like Microsoft Entra ID, and is becoming the de facto standard for provisioning.
 
