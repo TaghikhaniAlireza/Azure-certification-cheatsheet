@@ -1,4 +1,4 @@
-## Basic Concept
+# Basic Concept
 
 - formerly Azure Active Directory, is Microsoft’s cloud-based identity and access management service.
 - Organizations use Microsoft Entra ID to:
@@ -30,4 +30,66 @@
   - Microsoft Entra ID also provides application programming interfaces (APIs) that allow developers to build personalized app experiences using existing organizational data.
 
 > Subscribers to Azure services, Microsoft 365, or Dynamics 365 automatically have access to Microsoft Entra ID.
+
+# Function and Identity Types of Microsoft Entra ID
+![identity-types-inline](../images/SC-900/identity-types-inline.png)
+
+## User
+
+User identities represent individuals, including employees and external users (such as customers, consultants, vendors, and partners).
+
+- User identities are characterized by how they authenticate and the user type property.
+- Internal authentication means the user has an account on the host organization’s Microsoft Entra ID and uses that account to authenticate to Microsoft Entra ID.
+- External authentication means the user authenticates using an external Microsoft Entra account that belongs to another organization, a social network identity, or another external identity provider.
+- The user type property describes the user’s relationship to the organization or more specifically, the host organization’s tenancy.
+- ![entra-id-user-properties-v3-inline](../images/SC-900/entra-id-user-properties-v3-inline.png)
+
+  - **Internal members:** These users are typically considered employees of your organization.
+  - **Internal guest:** This scenario exists when organizations who collaborate with distributors, suppliers, and vendors set up internal Microsoft Entra accounts for these users but designate them as guests by setting the user object UserType to Guest.
+    - With B2B collaboration users can use their own credentials, allowing their external identity provider to manage authentication and their account lifecycle.
+  - **External guest:** External users or guests, including consultants, vendors, and partners, typically fall into this category.
+  - **External member:** This scenario is common in organizations consisting of multiple tenants.
+
+- External guests and external members are business-to-business (B2B) collaboration users that fall under the category of external identities in Microsoft Entra ID.
+
+---
+
+## Workload Identities
+
+- A workload identity is an identity you assign to a software workload.
+- A software workload may deal with multiple credentials to access different resources and those credentials need to be stored securely.
+- Enterprises risk their applications or services being exploited or breached because of difficulties in securing workload identities.
+- Microsoft Entra Workload ID helps resolve these issues when securing workload identities.
+
+### In Microsoft Entra, workload identities are:
+
+#### Applications and Service Principals
+
+- A service principal is essentially, an identity for an application.
+- For an application to delegate its identity and access functions to Microsoft Entra ID, the application must first be registered with Microsoft Entra ID to enable its integration.
+- Once an application is registered, a service principal is created in each Microsoft Entra tenant where the application is used.
+- Developers must manage and protect the credentials. If not done correctly, this can introduce security vulnerabilities.
+- Managed identities help off-load that responsibility from the developer.
+
+#### Managed Identities
+
+- Managed identities are a type of service principal that are automatically managed in Microsoft Entra ID and eliminate the need for developers to manage credentials.
+- ![managed-identities-inline](../images/SC-900/managed-identities-inline.png)
+
+There are two types of managed identities:
+
+##### System-assigned
+
+- Some Azure resources, such as virtual machines, allow you to enable a managed identity directly on the resource.
+- Azure automatically deletes the identity for you.
+- An example where you may find a system-assigned identity is when a workload is contained within a single Azure resource, such as an application that runs on a single virtual machine.
+
+##### User-assigned
+
+- You may also create a managed identity as a standalone Azure resource.
+- Once you create a user-assigned managed identity, you can assign it to one or more instances of an Azure service.
+- The identity is managed separately from the resources that use it.
+- This is useful in a scenario where you may have multiple VMs that all have the same set of permissions but may get recycled frequently.
+- Deleting any of the VMs doesn’t impact the user-assigned managed identity.
+
 
