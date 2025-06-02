@@ -153,3 +153,166 @@ Hybrid identity is accomplished through provisioning and synchronization.
 - Employs the **System for Cross-domain Identity Management (SCIM)** specification to provision and deprovision users and groups.
 - SCIM is a standard for automating the exchange of user/group identity information between domains like Microsoft Entra ID, and is becoming the de facto standard for provisioning.
 
+## External Identities
+
+- **Microsoft Entra External ID** combines powerful solutions for working with people outside of your organization.
+- ![external-identities-overview](../images/SC-900/external-identities-overview.png)
+
+### Scenarios Addressed:
+
+- Collaborate with business guests
+- Secure your apps for consumers and business customers
+
+### Tenant Configuration Options:
+
+- **Workforce tenant configuration**:  
+  For employees, internal business apps, and other organizational resources.  
+  You can invite external business partners and guests to your workforce tenant.
+
+- **External tenant configuration**:  
+  Used exclusively for External ID scenarios, such as publishing apps to consumers or business customers.
+![external-id-tenant-configurations](../images/SC-900/external-id-tenant-configurations.png)
+
+### Collaborate with Business Guests
+
+- External ID B2B collaboration allows your workforce to collaborate with external business partners.
+- You can share your company's applications and services with guests via your workforce tenant while maintaining control over your corporate data.
+- You can invite anyone to sign in using their own credentials to access shared apps and resources.
+- Use B2B collaboration for Office 365 apps, SaaS apps, and line-of-business apps.
+- Business guests have no credentials in your system; they authenticate via their home identity provider.
+- Your organization checks the user’s eligibility for guest collaboration.
+- ![b2b-collaboration-overview](../images/SC-900/b2b-collaboration-overview.png)
+
+### Secure Your Apps for Consumers and Business Customers
+
+- Microsoft Entra External ID includes Microsoft's **Customer Identity and Access Management (CIAM)** solution.
+- Features include:
+  - Self-service registration
+  - Personalized sign-in experiences
+  - SSO with social and enterprise identities
+  - Customer account management
+  - ![overview-ciam](overview-ciam.png)
+
+---
+
+## Authentication Capabilities of Microsoft Entra ID
+
+### Authentication Methods
+
+- **Passwords**  
+  Most common method, but insecure as a single-factor method.
+  ![authentication-methods-inline.png](../images/SC-900/authentication-methods-inline.png)
+
+- **Phone-based Authentication**
+  - **SMS-based**: Used as primary or secondary authentication in SSPR or MFA.
+  - **Voice call**: Used as a secondary method for verification in SSPR or MFA.
+
+- **OATH (Open Authentication)**
+  - **Software OATH tokens**: Apps that generate OTP using a seed.
+  - **Hardware OATH tokens**: Key fob-like devices with rotating codes.
+  - _Note: Only supported as secondary forms of authentication in Entra ID._
+
+- **Passwordless Authentication**
+  - **Windows Hello for Business**
+    - Replaces passwords with strong two-factor authentication.
+    - Combines device-based key/cert + something you know (PIN) or are (biometrics).
+  - **FIDO2**
+    - Open standard that eliminates usernames/passwords via external or platform keys.
+    - Supports USB, Bluetooth, NFC devices.
+    - Supported by Microsoft Entra ID for both web and Windows sign-ins.
+  - **Microsoft Authenticator App**
+    - Can be used as primary authentication or secondary verification.
+    - Can also act as an OATH software token.
+  - **Certificate-based Authentication (CBA)**
+    - Uses X.509 certificates for primary authentication.
+    - Supported for apps and browser sign-ins.
+    - X.509 certs are part of public key infrastructure (PKI).
+
+- **Primary and Secondary Authentication**
+  ![primary-secondary-authentication-v2-inline](../images/SC-900/primary-secondary-authentication-v2-inline.png)
+
+---
+
+### Multifactor Authentication (MFA)
+
+- MFA prompts users for an additional form of ID at sign-in.
+- MFA factors:
+  - **Something you know** – password/PIN
+  - **Something you have** – device or hardware key
+  - **Something you are** – biometric info
+
+#### Security Defaults and MFA
+
+- Preconfigured identity security settings from Microsoft.
+- Enforced at no extra cost.
+- Includes:
+  - Requiring MFA registration for all users
+  - Enforcing MFA for admins
+  - Requiring MFA for all users as needed
+- Great for basic security setups or free-tier usage.
+- Not ideal for orgs with P1/P2 licenses or complex needs.
+
+---
+
+### Self-Service Password Reset (SSPR)
+
+- Enables users to reset/change their passwords without admin help.
+
+#### Benefits:
+
+- Reduces IT support costs
+- Increases user productivity
+- Admins can push changes easily
+- Includes audit logs (API accessible for SIEM integration)
+
+#### Requirements for SSPR:
+
+- Assigned Microsoft Entra ID license
+- Enabled by admin
+- Registered authentication methods (recommended: 2+)
+
+#### Authentication Methods for SSPR:
+
+- Mobile app notification
+- Mobile app code
+- Email
+- Mobile phone
+- Office phone
+- Security questions  
+  _Note:_
+  - Not used during sign-in events
+  - Admins **cannot** use security questions for verification
+
+#### Notifications:
+
+- Email alerts for SSPR events
+- All global admins are notified when SSPR is used on admin accounts
+- ![SSPR](../images/SC-900/SSPR.png)
+
+---
+
+### Password Protection and Management
+
+- **Microsoft Entra Password Protection** blocks weak and known-compromised passwords.
+
+#### Global Banned Password List:
+
+- Maintained by Entra ID Protection team
+- Uses telemetry to identify risky passwords
+- Includes variants like "P@ssw0rd" via pattern substitution
+- Applied to all users; cannot be disabled
+
+#### Custom Banned Password Lists:
+
+- Admins can define org-specific password bans
+- Available with P1 or P2 licenses
+
+#### Protection from Password Spray Attacks:
+
+- Efficient blocking of weak, frequently used passwords
+
+#### Hybrid Security:
+
+- Password protection can be extended to on-prem Active Directory
+- Ensures consistent enforcement across environments
+
