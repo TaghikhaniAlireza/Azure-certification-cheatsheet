@@ -33,7 +33,8 @@ I plan to update the repository regularly:
 Just clone this repo or download the markdown files, and you’ll be able to read through everything using any markdown viewer you like.
 
 ## License
-This repo is under the MIT License - check the [LICENSE](LICENSE) file for more details.
+This repository is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+You are free to share, adapt, and use the contents for any purpose — even commercially — as long as you give proper credit.
 
 ## Resources
 - All notes are based on official materials from **Microsoft**.
