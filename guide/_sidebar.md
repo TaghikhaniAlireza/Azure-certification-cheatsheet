@@ -4,7 +4,7 @@
   - [رایانش ابری به زبان ساده؛ راهنمای شروع برای AZ-900](guide/Cloud_Computing_Concept.md)
 
 - SC-900
-  - [ ]()
+  - [مدیریت هویت در پاندوراسندباکس با Microsoft Entra ID](guide/MicrosoftEntra.md)
 - Azure VMware Solution
   - [مقدمه و معرفی](guide/avs/intro.md)
   - [معماری و اجزا](guide/avs/architecture.md)
